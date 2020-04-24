@@ -1,4 +1,4 @@
-package com.example.pigdice;
+/*package com.example.pigdice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,11 +8,12 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
-public class welcome extends AppCompatActivity {
+public class Welcome extends AppCompatActivity {
     TextView a,slogan;
     Animation topAnimation,bottomAnimation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_welcome);
@@ -27,3 +28,26 @@ public class welcome extends AppCompatActivity {
 
     }
 }
+*/
+package com.example.pigdice;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+
+public class Welcome extends AppCompatActivity {
+
+    private static int SPLASH_TIME_OUT = 4000;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+    }
+}
+

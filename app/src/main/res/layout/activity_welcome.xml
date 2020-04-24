@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".welcome"
-    android:background="@drawable/dice">
+    tools:context=".MainActivity"
+    android:background="@drawable/diceblur">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="200sp"
-            android:fontFamily="@font/bangers"
+            android:fontFamily="@font/anonymous_pro"
             android:text="PIG DICE"
             android:textColor="#ffffff"
             android:textSize="50sp" />
@@ -37,7 +37,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="50dp"
                 android:fontFamily="cursive"
-                android:text="@string/pig_dice"
+                android:text="Create Fun"
                 android:textColor="#ffff00"
                 android:textSize="24sp" />
         </RelativeLayout>
