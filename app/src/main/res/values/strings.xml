@@ -6,4 +6,9 @@
     <string name="rate_us">Rate Us</string>
     <string name="notifications">Notifications</string>
     <string name="Sound">Sound</string>
+    <string name="select">select</string>
+    <string name="default_dice">Default Dice</string>
+    <string name="silver_dice">Silver Dice</string>
+    <string name="gold_dice">Gold Dice</string>
+    <string name="todo">TODO</string>
 </resources>
