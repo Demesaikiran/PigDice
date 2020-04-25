@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 startActivity(new Intent(MainActivity.this, Welcome.class));
             }
-        },2000);
+        },4000);
 
     }
 }
