@@ -58,10 +58,14 @@ public class MainActivity extends AppCompatActivity {
         slogan.setAnimation(bottomAnimation);
 
         Handler handler = new Handler();
+
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(MainActivity.this, Welcome.class));
+                //startActivity(new Intent(MainActivity.this, Welcome.class));
+                Intent intent = new Intent(MainActivity.this, Welcome.class);
+                startActivity(intent);
+                finish();
             }
         },4000);
 
