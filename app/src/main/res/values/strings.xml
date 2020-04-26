@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">PigDice</string>
-    <string name="pig_dice">Pig Dice</string>
+    <string name="terms_and_conditions">Terms And Conditions</string>
+    <string name="view">View</string>
+    <string name="help">Help</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="notifications">Notifications</string>
+    <string name="Sound">Sound</string>
 </resources>
