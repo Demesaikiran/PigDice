@@ -43,8 +43,10 @@ public class Welcome extends AppCompatActivity {
 
     private static int SPLASH_TIME_OUT = 4000;
 
+    private Button button;
     private Button button2;
     private Button button3;
+    private Button button5;
 
 
 
@@ -62,11 +64,29 @@ public class Welcome extends AppCompatActivity {
             }
         });
 
-        button3 = (Button) findViewById(R.id.button);
-        button3.setOnClickListener(new View.OnClickListener() {
+        button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Welcome.this, VsComputer.class);
+                startActivity(intent);
+            }
+        });
+
+        button5 = (Button) findViewById(R.id.button5);
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Welcome.this, skins.class);
+                startActivity(intent);
+            }
+        });
+
+        button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Welcome.this, settings.class);
                 startActivity(intent);
             }
         });
