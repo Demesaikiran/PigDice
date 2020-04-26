@@ -36,16 +36,42 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
 
 public class Welcome extends AppCompatActivity {
 
     private static int SPLASH_TIME_OUT = 4000;
 
+    private Button button2;
+    private Button button3;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.screenone);
+
+        button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Welcome.this, SinglePlayer.class);
+                startActivity(intent);
+            }
+        });
+
+        button3 = (Button) findViewById(R.id.button);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Welcome.this, VsComputer.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 
     }
