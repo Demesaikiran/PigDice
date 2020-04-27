@@ -15,5 +15,9 @@
     <string name="player_score">Player Score</string>
     <string name="turn_score">Turn Score</string>
     <string name="hold">HOLD</string>
+    <string name="vs_computer">VS Computer</string>
+    <string name="single_player">Single Player</string>
+    <string name="settings">SETTINGS</string>
+    <string name="skins">Skins</string>
 
 </resources>

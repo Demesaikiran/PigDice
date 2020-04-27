@@ -31,23 +31,14 @@ public class Welcome extends AppCompatActivity {
 */
 package com.example.pigdice;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class Welcome extends AppCompatActivity {
-
-    private static int SPLASH_TIME_OUT = 4000;
-
-    private Button button;
-    private Button button2;
-    private Button button3;
-    private Button button5;
-
 
 
     @Override
@@ -55,7 +46,7 @@ public class Welcome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screenone);
 
-        button2 = (Button) findViewById(R.id.button2);
+        Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +55,7 @@ public class Welcome extends AppCompatActivity {
             }
         });
 
-        button = (Button) findViewById(R.id.button);
+        Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,7 +64,7 @@ public class Welcome extends AppCompatActivity {
             }
         });
 
-        button5 = (Button) findViewById(R.id.button5);
+        Button button5 = (Button) findViewById(R.id.button5);
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +73,7 @@ public class Welcome extends AppCompatActivity {
             }
         });
 
-        button3 = (Button) findViewById(R.id.button3);
+        Button button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
