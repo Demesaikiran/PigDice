@@ -13,7 +13,7 @@
         <activity android:name=".settings" >
         </activity>
         <activity android:name=".skins"/>
-        <activity android:name=".VsComputer"></activity>
+        <activity android:name=".VsComputer" />
         <activity android:name=".SinglePlayer" />
         <activity android:name=".Welcome" />
         <activity android:name=".MainActivity">
