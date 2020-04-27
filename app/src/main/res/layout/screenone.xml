@@ -42,47 +42,41 @@
 
     <Button
         android:id="@+id/button3"
+        android:layout_width="109dp"
+        android:layout_height="49dp"
+        android:background="@drawable/buttonshape"
+        android:text="SETTINGS"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:background="@drawable/buttonshape"
-        android:text="SETTINGS"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="603dp" />
+        app:layout_constraintVertical_bias="0.94" />
 
     <Button
         android:id="@+id/button4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.745"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.944"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
+        android:layout_width="94dp"
+        android:layout_height="47dp"
         android:background="@drawable/buttonshape"
         android:text="RATE US"
-        tools:layout_editor_absoluteX="225dp"
-        tools:layout_editor_absoluteY="591dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938" />
 
     <Button
         android:id="@+id/button5"
+        android:layout_width="118dp"
+        android:layout_height="49dp"
+        android:background="@drawable/buttonshape"
+        android:text="Skins"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.46"
-        android:layout_width="96dp"
-        android:layout_height="22dp"
-        android:background="@drawable/buttonshape"
-        android:text="Skins"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="253dp" />
+        app:layout_constraintVertical_bias="0.46" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
