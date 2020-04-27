@@ -11,4 +11,9 @@
     <string name="silver_dice">Silver Dice</string>
     <string name="gold_dice">Gold Dice</string>
     <string name="todo">TODO</string>
+    <string name="roll">ROLL</string>
+    <string name="player_score">Player Score</string>
+    <string name="turn_score">Turn Score</string>
+    <string name="hold">HOLD</string>
+
 </resources>
