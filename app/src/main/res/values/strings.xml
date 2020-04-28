@@ -19,5 +19,12 @@
     <string name="single_player">Single Player</string>
     <string name="settings">SETTINGS</string>
     <string name="skins">Skins</string>
+    <string name="give_up">give_up</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="image">image</string>
+    <string name="did_you_like_the_video">Did you like the video?</string>
+    <string name="Are_you_sure">Are_you_sure</string>
 
 </resources>
