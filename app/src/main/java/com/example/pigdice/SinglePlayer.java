@@ -22,7 +22,7 @@ import java.util.Random;
 public class SinglePlayer extends AppCompatActivity {
 
     final Handler handler =new Handler();
-    private List<Integer> dieImages = new ArrayList();
+    private ArrayList dieImages = new ArrayList();
     private MediaPlayer rollSound;
     private MediaPlayer shakeSound;
     private Animation shake;

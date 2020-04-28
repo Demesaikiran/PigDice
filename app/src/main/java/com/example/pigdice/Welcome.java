@@ -31,11 +31,16 @@ public class Welcome extends AppCompatActivity {
 */
 package com.example.pigdice;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Welcome extends AppCompatActivity {
@@ -82,6 +87,38 @@ public class Welcome extends AppCompatActivity {
             }
         });
 
+
+
+
+    }
+
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Welcome.this);
+
+        View view  = LayoutInflater.from(Welcome.this).inflate(R.layout.giveup_alert, null);
+        TextView title = (TextView) view.findViewById(R.id.title);
+        ImageButton imageButton = (ImageButton) view.findViewById(R.id.image);
+
+        title.setText("Do you want to exit");
+
+        imageButton.setImageResource(R.drawable.gold);
+
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Welcome.super.onBackPressed();
+            }
+        });
+
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+
+        builder.setView(view);
+        builder.show();
 
 
 
