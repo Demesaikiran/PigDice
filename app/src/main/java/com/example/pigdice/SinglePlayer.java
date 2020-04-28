@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -55,29 +56,33 @@ public class SinglePlayer extends AppCompatActivity {
         //this.diceSum =this.dice.rollDie();
     }
 
-    public void onBackPressed() {
+    public void  onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(SinglePlayer.this);
 
+        View view  = LayoutInflater.from(SinglePlayer.this).inflate(R.layout.giveup_alert, null);
+        TextView title = (TextView) view.findViewById(R.id.title);
+        ImageButton imageButton = (ImageButton) view.findViewById(R.id.image);
 
-        builder.setMessage("Giving Up?")
-                .setCancelable(false)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        SinglePlayer.super.onBackPressed();
+        title.setText("GivingUP?");
 
-                    }
-                })
-                .setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
+        imageButton.setImageResource(R.drawable.gold);
 
-                    }
-                });
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                SinglePlayer.super.onBackPressed();
+            }
+        });
 
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+
+        builder.setView(view);
+        builder.show();
 
     }
 

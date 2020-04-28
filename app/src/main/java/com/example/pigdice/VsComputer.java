@@ -24,7 +24,7 @@ public class VsComputer extends AppCompatActivity {
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(VsComputer.this);
 
-        View view  = LayoutInflater.from(VsComputer.this).inflate(R.layout.custom_alert, null);
+        View view  = LayoutInflater.from(VsComputer.this).inflate(R.layout.giveup_alert, null);
         TextView title = (TextView) view.findViewById(R.id.title);
         ImageButton imageButton = (ImageButton) view.findViewById(R.id.image);
 
@@ -49,28 +49,7 @@ public class VsComputer extends AppCompatActivity {
         builder.setView(view);
         builder.show();
 
-        /*
-        builder.setMessage("Giving Up?")
-                .setCancelable(false)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        VsComputer.super.onBackPressed();
 
-                    }
-                })
-                .setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-
-                    }
-                });
-
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
-
-         */
 
     }
 }
