@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".terms"></activity>
-        <activity android:name=".settings"></activity>
+        <activity android:name=".help"></activity>
+        <activity android:name=".terms" />
+        <activity android:name=".settings" />
         <activity android:name=".skins" />
         <activity android:name=".VsComputer" />
         <activity android:name=".SinglePlayer" />

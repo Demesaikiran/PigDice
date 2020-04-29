@@ -4,16 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".terms"
-    android:orientation="vertical">
+    tools:context=".help">
 
     <TextView
-        android:layout_marginTop="30sp"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:layout_marginBottom="30sp"
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
+        android:layout_marginVertical="30sp"
+        android:layout_marginHorizontal="20sp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"/>
+        android:layout_weight="1"
+        android:text="needing help this is help tab" />
 </LinearLayout>
