@@ -12,7 +12,7 @@
     <string name="gold_dice">Gold Dice</string>
     <string name="todo">TODO</string>
     <string name="roll">ROLL</string>
-    <string name="player_score">Player Score</string>
+
     <string name="turn_score">Turn Score</string>
     <string name="hold">HOLD</string>
     <string name="vs_computer">VS Computer</string>
@@ -26,5 +26,10 @@
     <string name="image">image</string>
     <string name="did_you_like_the_video">Did you like the video?</string>
     <string name="Are_you_sure">Are_you_sure</string>
+    <string name="player_score">Player Score</string>
+    <string name="computer_score">Computer Score</string>
+    <string name="_0">0</string>
+
+
 
 </resources>
