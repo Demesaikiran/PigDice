@@ -4,19 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".settings"
-    android:background="@drawable/background3"
+    android:background="@drawable/background8"
     android:orientation="vertical">
     <Switch
         android:id="@+id/switch2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansregular"
         android:padding="20sp"
+        android:textColor="@color/white"
         android:text="@string/Sound" />
 
     <Switch
         android:id="@+id/switch5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansregular"
+        android:textColor="@color/white"
         android:text="@string/notifications"
         android:padding="20sp"/>
     <RelativeLayout
@@ -26,6 +30,8 @@
             android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/lime"
+            android:fontFamily="@font/opensansregular"
             android:text="@string/terms_and_conditions"
             android:padding="20sp"
             android:layout_marginTop="2sp"/>
@@ -34,28 +40,34 @@
             android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansregular"
             android:text="@string/view"
             android:layout_marginTop="5sp"
             tools:ignore="RelativeOverlap" />
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/help"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/help"
+            android:layout_marginStart="40sp"
             android:layout_marginTop="100sp"
-            android:layout_marginStart="40sp" />
+            android:fontFamily="@font/opensansregular"
+            android:text="@string/help" />
+
         <Button
             android:id="@+id/rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rate_us"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="100sp"
             android:layout_marginEnd="40sp"
+            android:fontFamily="@font/opensansregular"
+            android:text="@string/rate_us"
             tools:ignore="RelativeOverlap" />
     </RelativeLayout>
 
