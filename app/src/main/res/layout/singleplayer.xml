@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/bcg">
 
-
     <Button
         android:id="@+id/button6"
         android:layout_width="137dp"
@@ -56,14 +55,9 @@
         android:contentDescription="@string/todo" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/player_score"
         android:layout_width="198dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/border"
+        android:layout_height="wrap_content"
         android:text="@string/player_score"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -74,17 +68,33 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.191" />
+        app:layout_constraintVertical_bias="0.19" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="133dp"
-        android:layout_height="65dp"
+        android:id="@+id/textView"
+        android:layout_width="198dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/border"
+        android:text="0"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.241" />
+
+    <TextView
+        android:id="@+id/turn_score"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
         android:text="@string/turn_score"
         android:textAlignment="center"
         android:textColor="@android:color/black"
@@ -93,6 +103,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.618" />
+        app:layout_constraintVertical_bias="0.608" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="133dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/border"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.695" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
