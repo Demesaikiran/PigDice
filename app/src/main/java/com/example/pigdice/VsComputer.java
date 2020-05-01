@@ -402,6 +402,7 @@ public class VsComputer extends AppCompatActivity {
         switch (this.tinydb.getInt("SkinInt")) {
             case 0:
                 this.dice1.setImageResource(R.drawable.dice1);
+                this.dice2.setImageResource(R.drawable.dice1);
 
                 this.dieImages.add(R.drawable.dice1);
                 this.dieImages.add(R.drawable.dice2);
@@ -413,6 +414,7 @@ public class VsComputer extends AppCompatActivity {
 
             case 1:
                 this.dice1.setImageResource(R.drawable.dice1_silver);
+                this.dice2.setImageResource(R.drawable.dice1_silver);
 
                 this.dieImages.add(R.drawable.dice1_silver);
                 this.dieImages.add(R.drawable.dice2_silver);
@@ -423,6 +425,7 @@ public class VsComputer extends AppCompatActivity {
                 return;
             case 2:
                 this.dice1.setImageResource(R.drawable.dice1_gold);
+                this.dice2.setImageResource(R.drawable.dice1_gold);
 
                 this.dieImages.add(R.drawable.dice1_gold);
                 this.dieImages.add(R.drawable.dice2_gold);
