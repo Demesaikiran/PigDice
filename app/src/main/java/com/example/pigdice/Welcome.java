@@ -44,6 +44,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Welcome extends AppCompatActivity {
+    private TinyDB tinyDB;
 
 
 
@@ -51,6 +52,10 @@ public class Welcome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screenone);
+        this.tinyDB = new TinyDB(this);
+        if (this.tinyDB.getInt("soundToggle") == 1) {
+            this.tinyDB.putInt("soundToggle", 1);
+        }
 
 
 
@@ -68,8 +73,8 @@ public class Welcome extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Welcome.this, VsComputer.class);
-                startActivity(intent);
+                //Intent intent = new Intent(Welcome.this, VsComputer.class);
+                Welcome.this.startGame(new Level(10, 0, 100, 10));
             }
         });
 
@@ -91,7 +96,12 @@ public class Welcome extends AppCompatActivity {
             }
         });
 
+    }
 
+    public void startGame(Level level){
+        Intent intent = new Intent(Welcome.this, VsComputer.class);
+        intent.putExtra("levelObject", level);
+        startActivity(intent);
 
 
     }

@@ -92,6 +92,7 @@ public class VsComputer extends AppCompatActivity {
         this.rotateAnimation = new RotateAnimation(0.0f, 360.0f, 1, 0.5f, 1, 0.5f);
         this.rotateAnimation.setDuration(300);
         initializeDie();
+        toggleSound();
         TextView textview2 =this.computerScoreText;
         String sb2 = "" +
                 this.computerScore;
@@ -287,8 +288,8 @@ public class VsComputer extends AppCompatActivity {
 
             this.holdDice.setEnabled(false);
             this.holdDice.setAlpha(0.5f);
-            this.rollDice.setEnabled(false);
-            this.rollDice.setAlpha(0.5f);
+            this.rollDice.setEnabled(true);
+            this.rollDice.setAlpha(1.0f);
             this.computerSum = 0;
             this.sumText.setText("0");
             gameChangeCounter = 0;
@@ -306,8 +307,42 @@ public class VsComputer extends AppCompatActivity {
                 this.computerSum;
 
         textView2.setText(sb3);
+        if (gameChangeCounter >= this.holdScore || this.computerSum + this.computerScore >= this.levelScore) {
+            gameChangeCounter = 0;
+            this.handler.postDelayed(new Runnable() {
+                public void run() {
+                    VsComputer.this.handleComputerHold(VsComputer.this.computerSum);
+                }
+            }, 1500);
+        } else {
+            this.handler.postDelayed(new Runnable() {
+                public void run() {
+                    VsComputer.this.roll();
+                }
+            }, 1500);
+        }
 
 
+
+    }
+
+    public void handleComputerHold(int i){
+        playsound(3);
+        this.computerScore += i;
+        this.computerSum = 0;
+        TextView textView = this.sumText;
+        String sb = ""+
+                this.computerSum;
+        textView.setText(sb);
+
+        TextView textView1 = this.computerScoreText;
+        String sb2 = "" +
+                this.computerScore;
+        textView1.setText(sb2);
+        this.holdDice.setEnabled(false);
+        this.rollDice.setEnabled(true);
+        this.rollDice.setAlpha(1.0f);
+        //checkWinner();
 
     }
 
@@ -323,6 +358,11 @@ public class VsComputer extends AppCompatActivity {
             assert audioManager != null;
             audioManager.setStreamMute(3, true);
         }
+    }
+
+    private void updateUserWins() {
+        int i =this.tinydb.getInt("UserWins");
+        this.tinydb.putInt("UserWins", i+1);
     }
 
 
@@ -355,9 +395,8 @@ public class VsComputer extends AppCompatActivity {
         builder.setView(view);
         builder.show();
 
-
-
     }
+    public void roll(){ computersRoll();}
 
     private void initializeDie() {
         switch (this.tinydb.getInt("SkinInt")) {
