@@ -6,8 +6,6 @@ import android.content.DialogInterface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
@@ -17,47 +15,29 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
-import java.util.Random;
 
 public class SinglePlayer extends AppCompatActivity {
 
     private ArrayList<Integer> dieImages = new ArrayList<Integer>();
     private MediaPlayer rollSound;
     private MediaPlayer shakeSound;
-    //private Animation shake;
     private Animation violentShake;
-    private int turnScore;
     private TextView playerScoreText;
     private int playerScore;
     private TextView sumText;
-    private int HoldScore;
     private Dice dice = new Dice(0,0);
     private MediaPlayer holdSound;
-    private boolean gamewon =false;
     public TinyDB tinydb;
+    private RotateAnimation rotateAnimation;
 
     public int diceSum;
     public int playerSum;
-    /*public AlertDialog dialog;
-    private Random random =new Random();
-
-     */
-
-
-
     public Button rollDice;
     public Button holdDice;
-    private TextView playerTextView;
     public ImageView dice1;
-    private RotateAnimation rotateAnimation;
-
-
-
 
 
 
@@ -285,10 +265,5 @@ public class SinglePlayer extends AppCompatActivity {
 
         }
     }
-
-
-
-
-
 
 }

@@ -2,8 +2,6 @@ package com.example.pigdice;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ComputableLiveData;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.media.AudioManager;
@@ -19,19 +17,13 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
-import java.io.PrintStream;
 import java.util.ArrayList;
 
-public class VsComputer extends AppCompatActivity {
-    private static final String TAG = "ComputerTag";
 
+
+public class VsComputer extends AppCompatActivity {
     static int gameChangeCounter;
     private TinyDB tinydb;
-    private TextView turnscore;
     private Dice dice = new Dice(0, 0);
     private Button rollDice;
     private ArrayList<Integer> dieImages = new ArrayList<Integer>();
@@ -39,7 +31,6 @@ public class VsComputer extends AppCompatActivity {
     private MediaPlayer shakeSound;
     private Animation violentShake;
     private Animation shake;
-    private int turnScore;
     private TextView playerScoreText;
     private TextView computerScoreText;
     private int playerScore;
@@ -52,7 +43,6 @@ public class VsComputer extends AppCompatActivity {
     public int diceSum1, diceSum2;
     public int playerSum;
     public Button holdDice;
-    private TextView playerTextView;
     public ImageView dice1;
     public ImageView dice2;
     private RotateAnimation rotateAnimation;
@@ -73,6 +63,7 @@ public class VsComputer extends AppCompatActivity {
         this.shake = AnimationUtils.loadAnimation(VsComputer.this, R.anim.shake);
         this.violentShake = AnimationUtils.loadAnimation(VsComputer.this, R.anim.violent_shake);
         Level level = (Level) getIntent().getSerializableExtra("levelObject");
+        assert level != null;
         this.holdScore = level.getHoldValue();
         this.computerScore = level.getCompScore();
         this.originalScore = level.getCompScore();
@@ -93,10 +84,10 @@ public class VsComputer extends AppCompatActivity {
         this.rotateAnimation.setDuration(300);
         initializeDie();
         toggleSound();
-        TextView textview2 =this.computerScoreText;
+        TextView tv2 =this.computerScoreText;
         String sb2 = "" +
                 this.computerScore;
-        textview2.setText(sb2);
+        tv2.setText(sb2);
 
 
         this.rollDice.setOnClickListener(new View.OnClickListener() {
@@ -142,9 +133,9 @@ public class VsComputer extends AppCompatActivity {
             }
         });
 
-
-
     }
+
+
 
     public void handlePlayerRoll() {
         this.diceSum1 = dice.rollDie1();
@@ -220,7 +211,6 @@ public class VsComputer extends AppCompatActivity {
                 this.playerSum;
         tv2.setText(sb2);
 
-
         if(!this.gamewon) {
             this.handler.postDelayed(new Runnable() {
                 @Override
@@ -233,9 +223,6 @@ public class VsComputer extends AppCompatActivity {
     }
 
     public void computersRoll(){
-        PrintStream printStream = System.out;
-        String sb = "";
-        // Need to check once to change game
 
         this.diceSum1 = this.dice.rollDie1();
         this.diceSum2 = this.dice.rollDie2();
@@ -259,6 +246,8 @@ public class VsComputer extends AppCompatActivity {
             }
         });
     }
+
+
 
     public void handleComputerAnimation(int i, int j){
         if(i ==1 && j == 1) {
@@ -322,9 +311,9 @@ public class VsComputer extends AppCompatActivity {
             }, 1500);
         }
 
-
-
     }
+
+
 
     public void handleComputerHold(int i){
         playsound(3);
@@ -367,6 +356,8 @@ public class VsComputer extends AppCompatActivity {
 
 
 
+
+
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(VsComputer.this);
 
@@ -396,7 +387,14 @@ public class VsComputer extends AppCompatActivity {
         builder.show();
 
     }
-    public void roll(){ computersRoll();}
+
+
+
+    public void roll(){
+        computersRoll();
+    }
+
+
 
     private void initializeDie() {
         switch (this.tinydb.getInt("SkinInt")) {
@@ -440,10 +438,14 @@ public class VsComputer extends AppCompatActivity {
         }
     }
 
+
+
     private void setDieImages(int i, int j) {
         this.dice1.setImageResource(this.dieImages.get(i - 1));
         this.dice2.setImageResource(this.dieImages.get(j-1));
     }
+
+
 
     public void playsound(int i) {
         switch (i) {
