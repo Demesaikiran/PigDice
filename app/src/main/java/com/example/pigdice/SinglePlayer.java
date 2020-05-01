@@ -76,11 +76,12 @@ public class SinglePlayer extends AppCompatActivity {
         this.dice1 = findViewById(R.id.imageView);
         this.sumText = findViewById(R.id.textView4);
         this.playerScoreText.setText("0");
+        this.tinydb = new TinyDB(this);
 
         this.rotateAnimation = new RotateAnimation(0.0f, 360.0f, 1, 0.5f, 1, 0.5f);
         this.rotateAnimation.setDuration(300);
         initializeDie();
-        //toggleSound();
+        toggleSound();
 
         this.rollDice.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -173,7 +174,7 @@ public class SinglePlayer extends AppCompatActivity {
         TextView title =  view.findViewById(R.id.title);
         ImageButton imageButton =  view.findViewById(R.id.image);
 
-        title.setText("GivingUP?");
+        title.setText("Giving UP?");
 
         imageButton.setImageResource(R.drawable.gold);
 
@@ -208,7 +209,7 @@ public class SinglePlayer extends AppCompatActivity {
 
 
     private void initializeDie() {
-        switch (2) {
+        switch (this.tinydb.getInt("SkinInt")) {
             case 0:
                 this.dice1.setImageResource(R.drawable.dice1);
 

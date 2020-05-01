@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class skins extends AppCompatActivity {
 
@@ -16,6 +17,7 @@ public class skins extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.tinydb = new TinyDB(this);
         setContentView(R.layout.activity_skins);
         this.whiteButton = findViewById(R.id.whiteDice);
         this.goldButton =  findViewById(R.id.goldDice);
@@ -26,6 +28,7 @@ public class skins extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skins.this.tinydb.putInt("SkinInt", 0);
+                Toast.makeText(skins.this, "White Dice Selected", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -34,6 +37,7 @@ public class skins extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skins.this.tinydb.putInt("SkinInt",1);
+                Toast.makeText(skins.this, "Silver Dice Selected", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -41,6 +45,7 @@ public class skins extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skins.this.tinydb.putInt("SkinInt",2);
+                Toast.makeText(skins.this, "Gold Dice Selected", Toast.LENGTH_SHORT).show();
             }
         });
 
