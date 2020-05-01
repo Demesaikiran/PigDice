@@ -21,9 +21,16 @@ public class TinyDB {
         return this.preferences.getString(str, "");
     }
 
-    public int getInt(String str) {
-        return this.preferences.getInt(str, 0);
+    public ArrayList<Integer> getListInt(String str) {
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(TextUtils.split(this.preferences.getString(str, ""), "‚‗‚")));
+        ArrayList<Integer> arrayList2 = new ArrayList<>();
+        for (String o : arrayList) {
+            arrayList2.add(Integer.parseInt(o));
+        }
+        return arrayList2;
     }
+
+
 
     public long getLong(String str, long j) {
         return this.preferences.getLong(str, j);
@@ -31,6 +38,15 @@ public class TinyDB {
 
     public float getFloat(String str) {
         return this.preferences.getFloat(str, 0.0f);
+    }
+
+    public ArrayList<Double> getListDouble(String str) {
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(TextUtils.split(this.preferences.getString(str, ""), "‚‗‚")));
+        ArrayList<Double> arrayList2 = new ArrayList<>();
+        for (String o : arrayList) {
+            arrayList2.add(Double.parseDouble(o));
+        }
+        return arrayList2;
     }
 
     public double getDouble(String str, double d) {
@@ -41,9 +57,21 @@ public class TinyDB {
         }
     }
 
+    public int getInt(String str) {
+        return this.preferences.getInt(str, 0);
+    }
+    public ArrayList<Long> getListLong(String str) {
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(TextUtils.split(this.preferences.getString(str, ""), "‚‗‚")));
+        ArrayList<Long> arrayList2 = new ArrayList<>();
+        for (String o : arrayList) {
+            arrayList2.add(Long.parseLong(o));
+        }
+        return arrayList2;
+    }
 
 
-    private ArrayList<String> getListString(String str) {
+
+    public ArrayList<String> getListString(String str) {
         return new ArrayList<>(Arrays.asList(TextUtils.split(this.preferences.getString(str, ""), "‚‗‚")));
     }
 
@@ -97,13 +125,13 @@ public class TinyDB {
         this.preferences.edit().putString(str, TextUtils.join("‚‗‚", (Double[]) arrayList.toArray(new Double[0]))).apply();
     }
 
-    private void putString(String str, String str2) {
+    public void putString(String str, String str2) {
         checkForNullKey(str);
         checkForNullValue(str2);
         this.preferences.edit().putString(str, str2).apply();
     }
 
-    private void putListString(String str, ArrayList<String> arrayList) {
+    public void putListString(String str, ArrayList<String> arrayList) {
         checkForNullKey(str);
         this.preferences.edit().putString(str, TextUtils.join("‚‗‚", (String[]) arrayList.toArray(new String[0]))).apply();
     }
@@ -158,13 +186,13 @@ public class TinyDB {
         return "mounted".equals(externalStorageState) || "mounted_ro".equals(externalStorageState);
 
     }
-    private void checkForNullKey(String str) {
+    public void checkForNullKey(String str) {
         if (str == null) {
             throw new NullPointerException();
         }
     }
 
-    private void checkForNullValue(String str) {
+    public void checkForNullValue(String str) {
         if (str == null) {
             throw new NullPointerException();
         }

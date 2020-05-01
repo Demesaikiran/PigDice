@@ -46,10 +46,14 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Welcome extends AppCompatActivity {
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screenone);
+
+
+
 
         Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {

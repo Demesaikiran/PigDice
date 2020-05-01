@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".skins"
-    android:background="@drawable/background3"
+    android:background="@drawable/background2"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#08df00"
+        android:background="@color/slate_gray"
         android:layout_margin="20sp"
         >
 
         <ImageView
-            android:id="@+id/whiteDice"
+
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:srcCompat="@drawable/white"
@@ -33,6 +33,7 @@
             android:layout_marginStart="110sp"
             android:textSize="18sp"/>
         <Button
+            android:id="@+id/whiteDice"
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:text="@string/select"
@@ -44,14 +45,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#08df00"
+        android:background="@color/slate_gray"
         android:layout_margin="20sp"
         >
         <ImageView
-            android:id="@+id/goldDice"
+
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:srcCompat="@drawable/gold"
+            app:srcCompat="@drawable/silver"
             android:layout_marginStart="20sp"
             android:layout_marginTop="30sp"
             android:layout_marginBottom="30sp"
@@ -65,6 +66,7 @@
             android:layout_marginStart="110sp"
             android:textSize="18sp"/>
         <Button
+            android:id="@+id/silverDice"
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:text="@string/select"
@@ -73,37 +75,40 @@
             android:layout_marginStart="230sp"/>
 
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#08df00"
         android:layout_margin="20sp"
-        >
+        android:background="@color/slate_gray">
 
         <ImageView
-            android:id="@+id/silverDice"
+
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:srcCompat="@drawable/silver"
             android:layout_marginStart="20sp"
             android:layout_marginTop="30sp"
             android:layout_marginBottom="30sp"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/gold" />
+
         <TextView
             android:layout_width="100sp"
             android:layout_height="wrap_content"
-            android:text="@string/silver_dice"
+            android:layout_marginStart="110sp"
             android:layout_marginTop="45sp"
             android:layout_marginBottom="20sp"
-            android:layout_marginStart="110sp"
-            android:textSize="18sp"/>
+            android:text="@string/silver_dice"
+            android:textSize="18sp" />
+
         <Button
+            android:id="@+id/goldDice"
             android:layout_width="100sp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
+            android:layout_marginStart="230sp"
             android:layout_marginTop="30sp"
             android:layout_marginBottom="20sp"
-            android:layout_marginStart="230sp"/>
+            android:text="@string/select" />
 
     </RelativeLayout>
 

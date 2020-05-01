@@ -80,6 +80,7 @@ public class SinglePlayer extends AppCompatActivity {
         this.rotateAnimation = new RotateAnimation(0.0f, 360.0f, 1, 0.5f, 1, 0.5f);
         this.rotateAnimation.setDuration(300);
         initializeDie();
+        //toggleSound();
 
         this.rollDice.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -197,8 +198,10 @@ public class SinglePlayer extends AppCompatActivity {
     private void toggleSound() {
         AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         if (this.tinydb.getInt("soundToggle") == 1) {
+            assert audioManager != null;
             audioManager.setStreamMute(3, false);
         } else {
+            assert audioManager != null;
             audioManager.setStreamMute(3, true);
         }
     }

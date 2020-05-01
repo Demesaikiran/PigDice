@@ -13,22 +13,21 @@ import android.widget.Switch;
 
 public class settings extends AppCompatActivity {
     public AlertDialog dialog;
-    private Switch soundToggle;
     public TinyDB tinydb;
 
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_settings);
-        this.soundToggle =(Switch)findViewById(R.id.switch2);
+        Switch soundToggle = findViewById(R.id.switch2);
         this.tinydb = new TinyDB(this);
         if(this.tinydb.getInt("soundToggle")==1) {
-            this.soundToggle.setChecked(true);
+            soundToggle.setChecked(true);
         }
         else {
-            this.soundToggle.setChecked(false);
+            soundToggle.setChecked(false);
         }
-        this.soundToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        soundToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if(isChecked) {
@@ -41,7 +40,7 @@ public class settings extends AppCompatActivity {
             }
         });
 
-        Button button1 = (Button) findViewById(R.id.view);
+        Button button1 = findViewById(R.id.view);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +49,7 @@ public class settings extends AppCompatActivity {
             }
         });
 
-        Button button2 = (Button) findViewById(R.id.help);
+        Button button2 = findViewById(R.id.help);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
