@@ -156,7 +156,7 @@ public class SinglePlayer extends AppCompatActivity {
 
         title.setText("Giving UP?");
 
-        imageButton.setImageResource(R.drawable.gold);
+        imageButton.setImageResource(R.drawable.sure);
 
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override

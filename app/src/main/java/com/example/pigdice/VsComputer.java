@@ -451,7 +451,7 @@ public class VsComputer extends AppCompatActivity {
 
         title.setText("GivingUP?");
 
-        imageButton.setImageResource(R.drawable.gold);
+        imageButton.setImageResource(R.drawable.sure);
 
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override

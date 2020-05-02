@@ -115,7 +115,7 @@ public class Welcome extends AppCompatActivity {
 
         title.setText("Do you want to exit");
 
-        imageButton.setImageResource(R.drawable.gold);
+        imageButton.setImageResource(R.drawable.sure);
 
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
