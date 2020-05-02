@@ -2,8 +2,11 @@ package com.example.pigdice;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -17,6 +20,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 
@@ -206,6 +212,7 @@ public class VsComputer extends AppCompatActivity {
         String sb = "" +
                 this.playerScore;
         textView.setText(sb);
+        checkWinner(this.playerScore);
         TextView tv2 = this.sumText;
         String sb2 = "" +
                 this.playerSum;
@@ -331,7 +338,84 @@ public class VsComputer extends AppCompatActivity {
         this.holdDice.setEnabled(false);
         this.rollDice.setEnabled(true);
         this.rollDice.setAlpha(1.0f);
-        //checkWinner();
+        checkWinner(this.computerScore);
+
+    }
+
+
+    @SuppressLint("SetTextI18n")
+    private void checkWinner(int i) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(VsComputer.this);
+
+        if(i >= this.levelScore) {
+            this.gamewon = true;
+            if(this.computerScore > this.playerScore) {
+                View view = LayoutInflater.from(VsComputer.this).inflate(R.layout.win_loos_alert, null);
+                TextView title = (TextView) view.findViewById(R.id.title);
+                ImageButton imageButton = (ImageButton) view.findViewById(R.id.image);
+
+
+                title.setText("You Lost");
+
+                imageButton.setImageResource(R.drawable.crying);
+
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        VsComputer.this.resetScores();
+                        dialogInterface.cancel();
+
+
+                    }
+                });
+
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                        VsComputer.this.finish();
+                    }
+                });
+                builder.setCancelable(true);
+
+                builder.setView(view);
+                builder.show();
+            }
+            else {
+
+                View view = LayoutInflater.from(VsComputer.this).inflate(R.layout.win_loos_alert, null);
+                TextView title = (TextView) view.findViewById(R.id.title);
+                ImageButton imageButton = (ImageButton) view.findViewById(R.id.image);
+
+
+                title.setText("You Won");
+
+                imageButton.setImageResource(R.drawable.happy);
+
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        VsComputer.this.resetScores();
+                        dialogInterface.cancel();
+
+
+                    }
+                });
+
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                        VsComputer.this.finish();
+                    }
+                });
+                builder.setCancelable(true);
+
+                builder.setView(view);
+                builder.show();
+            }
+        }
+
 
     }
 
@@ -386,6 +470,24 @@ public class VsComputer extends AppCompatActivity {
         builder.setView(view);
         builder.show();
 
+    }
+
+    public void resetScores() {
+        this.playerScore = 0;
+        TextView textView =this.playerScoreText;
+        String sb ="" +
+                this.playerScore;
+        textView.setText(sb);
+
+        this.computerScore =this.originalScore;
+        TextView textView1 =this.computerScoreText;
+        String sb1 = "" +
+                this.computerScore;
+        textView1.setText(sb1);
+
+        this.gamewon = false;
+        this.rollDice.setEnabled(true);
+        this.rollDice.setAlpha(1.0f);
     }
 
 
