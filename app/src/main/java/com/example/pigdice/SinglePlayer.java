@@ -123,6 +123,7 @@ public class SinglePlayer extends AppCompatActivity {
             this.holdDice.setEnabled(false);
             //this.playerScore = ;
             this.playerSum = 0;
+            this.diceSum = 0;
             this.sumText.setText("0");
             //this.playerScoreText.setText("0");
         }
