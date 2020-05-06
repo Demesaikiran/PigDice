@@ -24,18 +24,20 @@
             android:layout_marginBottom="30sp"
             android:layout_marginStart="15sp"
             android:contentDescription="@string/todo" />
+
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="@string/default_dice"
+            android:layout_marginStart="110sp"
             android:layout_marginTop="20sp"
             android:layout_marginBottom="20sp"
-            android:layout_marginStart="110sp"
-            android:textSize="18sp"/>
+            android:fontFamily="@font/antic"
+            android:text="@string/default_dice"
+            android:textSize="18sp" />
         <Button
             android:id="@+id/whiteDice"
             android:layout_width="100sp"
-            android:layout_height="wrap_content"
+            android:layout_height="50sp"
             android:text="@string/select"
             android:background="@drawable/bg"
             android:backgroundTint="#000000"
