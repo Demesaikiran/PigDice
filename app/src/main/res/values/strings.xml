@@ -10,6 +10,7 @@
     <string name="default_dice">Default Dice</string>
     <string name="silver_dice">Silver Dice</string>
     <string name="gold_dice">Gold Dice</string>
+    <string name="white_dice">White Dice</string>
     <string name="roll">ROLL</string>
 
     <string name="turn_score">Turn Score</string>

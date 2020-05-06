@@ -10,29 +10,28 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/bg"
         android:layout_margin="20sp"
         >
-
         <ImageView
 
             android:layout_width="40dp"
             android:layout_height="40dp"
             app:srcCompat="@drawable/white"
-            android:layout_marginTop="20sp"
-            android:layout_marginBottom="30sp"
             android:layout_marginStart="15sp"
+            android:layout_marginTop="22sp"
+            android:layout_marginBottom="15sp"
             android:contentDescription="@string/todo" />
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:layout_marginStart="100sp"
             android:layout_marginTop="29sp"
             android:layout_marginBottom="20sp"
             android:fontFamily="@font/antic"
-            android:text="@string/default_dice"
+            android:text="@string/white_dice"
             android:textColor="#000000"
             android:textSize="18sp" />
         <Button
@@ -41,12 +40,12 @@
             android:layout_height="30sp"
             android:text="@string/select"
             android:background="@drawable/bg"
-            android:backgroundTint="#000000"
             android:textColor="#ffffff"
+            android:backgroundTint="#000000"
             android:layout_marginTop="25sp"
             android:layout_marginBottom="20sp"
             android:layout_marginStart="230sp"
-            android:layout_marginEnd="20sp"/>
+            android:layout_marginEnd="10sp"/>
 
     </RelativeLayout>
     <RelativeLayout
@@ -126,7 +125,8 @@
             android:text="@string/select"
             android:background="@drawable/bg"
             android:backgroundTint="#000000"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:layout_marginEnd="10sp"/>
 
     </RelativeLayout>
     <ImageView
