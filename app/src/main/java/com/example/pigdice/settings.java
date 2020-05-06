@@ -39,16 +39,7 @@ public class settings extends AppCompatActivity {
 
             }
         });
-
-        Button button1 = findViewById(R.id.view);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(settings.this, terms.class);
-                startActivity(intent);
-            }
-        });
-
+        
         Button button2 = findViewById(R.id.help);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
