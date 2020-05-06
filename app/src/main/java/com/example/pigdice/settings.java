@@ -39,7 +39,7 @@ public class settings extends AppCompatActivity {
 
             }
         });
-        
+
         Button button2 = findViewById(R.id.help);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override

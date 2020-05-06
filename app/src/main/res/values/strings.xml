@@ -10,7 +10,6 @@
     <string name="default_dice">Default Dice</string>
     <string name="silver_dice">Silver Dice</string>
     <string name="gold_dice">Gold Dice</string>
-    <string name="todo">TODO</string>
     <string name="roll">ROLL</string>
 
     <string name="turn_score">Turn Score</string>
@@ -30,6 +29,7 @@
     <string name="computer_score">Computer Score</string>
     <string name="_0">0</string>
     <string name="Rematch">Rematch</string>
+    <string name="todo">TODO</string>
 
 
 </resources>
