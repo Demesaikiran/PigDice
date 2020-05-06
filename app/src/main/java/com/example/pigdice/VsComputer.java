@@ -2,11 +2,9 @@ package com.example.pigdice;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -20,9 +18,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 
@@ -56,7 +51,6 @@ public class VsComputer extends AppCompatActivity {
     private int holdScore;
     private int originalScore;
     private int levelScore;
-    private int reRollPercent;
 
 
     @Override
@@ -74,7 +68,6 @@ public class VsComputer extends AppCompatActivity {
         this.computerScore = level.getCompScore();
         this.originalScore = level.getCompScore();
         this.levelScore = level.getLevelScore();
-        this.reRollPercent = level.getRerollPercent();
         this.rollDice = findViewById(R.id.button6);
         this.holdDice = findViewById(R.id.button7);
         this.holdDice.setEnabled(false);
