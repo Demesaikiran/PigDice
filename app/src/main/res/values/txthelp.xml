@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Help">
+        "                       HELP
+        Pigdice game can be played in two modes:Single Player , vs Computer.
+
+Toss the dice to earn points.
+
+By pressing HOLD you can save all the points gained in that turn.
+
+If you toss 1,then the score earned in that turn is lost...
+
+Single Player:
+	You may roll the dice as many times you wish, and score is added to turn score.
+	Once you press hold , turn score is added to your total score.
+	If the dice roll 1 then the turn score becomes 0.
+	You will win the game when you reach 100 points..
+vs Computer:
+	You may roll the dice as many times you wish, and score is added to turn score.
+	Once you press hold , turn score is added to your total score and opportunity is given to computer i.e it will be computers turn.
+	If the dice roll 1 then turn score becomes 0 and turn is given to computer.
+	Similar in case of computer..
+	The first player to reach 100 points wins!
+
+When you press hold, all the points of that turn are added to your total score...
+Don't be soo greedy..."
+
+    </string>
+</resources>
